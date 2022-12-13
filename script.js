@@ -8,6 +8,8 @@ function createGrid(num) {
     for (let j = 0; j < num; j++) {
       const squareDiv = document.createElement('div');
       squareDiv.classList.add('square');
+      squareDiv.style.width = `${(400 / num)}px`;
+      squareDiv.style.height = `${(400 / num)}px`;
       squareDiv.addEventListener('mouseover', function() {
         this.classList.add('hover');
       })
