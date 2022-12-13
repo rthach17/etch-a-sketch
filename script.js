@@ -3,19 +3,17 @@ let container = document.querySelector('div');
 
 function createGrid(num) {
   for (let i = 0; i < num; i++) {
-    const columnDiv = document.createElement('div');
-    columnDiv.classList.add('column');
+    const row = document.createElement('div');
+    row.classList.add('row');
     for (let j = 0; j < num; j++) {
-      const squareDiv = document.createElement('div');
-      squareDiv.classList.add('square');
-      squareDiv.style.width = `${(400 / num)}px`;
-      squareDiv.style.height = `${(400 / num)}px`;
-      squareDiv.addEventListener('mouseover', function() {
+      const div = document.createElement('div');
+      div.classList.add('square');
+      div.addEventListener('mouseover', function() {
         this.style.backgroundColor = getRandomRgbValue();
       })
-      columnDiv.appendChild(squareDiv);
+      row.appendChild(div);
     }
-    container.appendChild(columnDiv);
+    container.appendChild(row);
   }
 }
 
