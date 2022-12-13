@@ -50,7 +50,7 @@ function getRandomRgbValue() {
 let reset = document.getElementById('reset');
 reset.addEventListener('click', () => {
   let squares = document.querySelectorAll('.square');
-  squares.forEach(square => square.classList.remove('hover'));
+  squares.forEach(square => square.style.backgroundColor = 'black');
 });
 
 // 'Change Grid Size' button
