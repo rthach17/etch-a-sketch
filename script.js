@@ -8,6 +8,5 @@ for (let i = 0; i < 16; i++) {
     squareDiv.classList.add('square');
     columnDiv.appendChild(squareDiv);
   }
-  
   container.appendChild(columnDiv);
 }
