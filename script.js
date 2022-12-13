@@ -1,6 +1,5 @@
-let container = document.querySelector('div');
-
 // Create 16x16 square grid
+let container = document.querySelector('div');
 for (let i = 0; i < 16; i++) {
   const columnDiv = document.createElement('div');
   columnDiv.classList.add('column');
@@ -16,7 +15,7 @@ for (let i = 0; i < 16; i++) {
 }
 
 // Reset square colors
-let reset = document.querySelector('button');
+let reset = document.getElementById('reset');
 reset.addEventListener('click', () => {
   let squares = document.querySelectorAll('.square');
   squares.forEach(square => square.classList.remove('hover'));
