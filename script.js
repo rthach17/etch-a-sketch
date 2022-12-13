@@ -11,7 +11,7 @@ function createGrid(num) {
       squareDiv.style.width = `${(400 / num)}px`;
       squareDiv.style.height = `${(400 / num)}px`;
       squareDiv.addEventListener('mouseover', function() {
-        this.classList.add('hover');
+        this.style.backgroundColor = getRandomRgbValue();
       })
       columnDiv.appendChild(squareDiv);
     }
@@ -34,6 +34,16 @@ function promptGridChange() {
     removeGrid();
     createGrid(num);
   }
+}
+
+function getRandomNumFromZeroTo(num) {
+  return Math.floor(Math.random() * (num + 1));
+}
+
+function getRandomRgbValue() {
+  return `rgb(${getRandomNumFromZeroTo(255)}, 
+              ${getRandomNumFromZeroTo(255)},
+              ${getRandomNumFromZeroTo(255)})`;
 }
 
 // 'Reset' button to reset square colors
